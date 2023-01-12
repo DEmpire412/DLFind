@@ -55,6 +55,8 @@ extension UIResponder {
 
 struct ContentView: View {
     
+    @AppStorage("isDarkMode") private var isDarkMode = 0
+    
     // Defines the list of the states
     @State private var states: [ (name: String, destination: AnyView) ] = [
         (name: "New Jersey", destination: AnyView(NJView())),
@@ -109,6 +111,25 @@ struct ContentView: View {
                 .listStyle(SidebarListStyle())
                 .frame(minWidth: 225)
                 
+                // Enables toolbar, sidebar, and settings toggle buttons
+                .toolbar {
+                    #if os(macOS)
+                    ToolbarItem(placement: .navigation) {
+                        Button(action: toggleSidebar, label: { // 1
+                            Image(systemName: "sidebar.leading")
+                        })
+                    }
+                    #endif
+                    
+                    #if os(iOS)
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: iOSSettings(), label: { // 1
+                            Image(systemName: "gearshape")
+                        })
+                    }
+                    #endif
+                }
+                
                 // Enables "No State Selected" text on macOS
                 #if os(macOS)
                 VStack {
@@ -132,14 +153,8 @@ struct ContentView: View {
                 #endif
             }
         
-            // Enables toolbar and sidebar toggle button
-            .toolbar {
-                ToolbarItem(placement: .navigation) {
-                    Button(action: toggleSidebar, label: { // 1
-                        Image(systemName: "sidebar.leading")
-                    })
-                }
-            }
+            //Sets app-specific light/dark mode
+            .preferredColorScheme(isDarkMode == 1 ? .light : isDarkMode == 2 ? .dark : nil)
         }
         
         // Analyzes search results

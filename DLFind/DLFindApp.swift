@@ -14,5 +14,12 @@ struct DLFindApp: App {
         WindowGroup {
             ContentView()
         }
+        
+        #if os(macOS)
+        Settings {
+            macOSSettings()
+                .frame(minWidth: 300, maxWidth: 300, minHeight: 100, maxHeight: 300)
+        }
+        #endif
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0AE8B82970BF9A0039E3DF /* macOSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AE8B72970BF9A0039E3DF /* macOSSettings.swift */; };
+		2A0AE8BA2970BFB60039E3DF /* iOSSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0AE8B92970BFB60039E3DF /* iOSSettings.swift */; };
 		2A2E2D092926C79A0087014B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2E2D082926C79A0087014B /* Assets.xcassets */; };
 		2A2E2D0D2926C79A0087014B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2E2D0C2926C79A0087014B /* Preview Assets.xcassets */; };
 		2AABAA6B2956497800035A75 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AABAA6A2956497800035A75 /* ListItem.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0AE8B72970BF9A0039E3DF /* macOSSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macOSSettings.swift; sourceTree = "<group>"; };
+		2A0AE8B92970BFB60039E3DF /* iOSSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSettings.swift; sourceTree = "<group>"; };
 		2A2E2D012926C7990087014B /* DLFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2E2D082926C79A0087014B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A2E2D0A2926C79A0087014B /* DLFind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DLFind.entitlements; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				2AE66A4D2927E854003D4727 /* DLFindApp.swift */,
 				2A294619292ECC2D001E63F6 /* State Views */,
 				2AB0B7BA292C34E3003BFB3B /* ContentView.swift */,
+				2A0AE8B72970BF9A0039E3DF /* macOSSettings.swift */,
+				2A0AE8B92970BFB60039E3DF /* iOSSettings.swift */,
 				2AABAA6A2956497800035A75 /* ListItem.swift */,
 				2ABDFD91294E666E00C32E29 /* String Extension.swift */,
 				2A2E2D082926C79A0087014B /* Assets.xcassets */,
@@ -164,6 +170,8 @@
 			files = (
 				2AE66A4E2927E854003D4727 /* DLFindApp.swift in Sources */,
 				2AABAA6B2956497800035A75 /* ListItem.swift in Sources */,
+				2A0AE8BA2970BFB60039E3DF /* iOSSettings.swift in Sources */,
+				2A0AE8B82970BF9A0039E3DF /* macOSSettings.swift in Sources */,
 				2AB0B7BB292C34E3003BFB3B /* ContentView.swift in Sources */,
 				2ABDFD98294E687700C32E29 /* NDView.swift in Sources */,
 				2ABDFD94294E683A00C32E29 /* NJView.swift in Sources */,
